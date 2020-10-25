@@ -55,4 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'capistrano', '~> 3.14'
 gem 'capistrano-rails'
+gem 'capistrano-rbenv'
 gem 'capistrano-bundler'
+gem 'bcrypt_pbkdf'
+gem 'ed25519'
