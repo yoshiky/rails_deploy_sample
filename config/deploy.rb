@@ -11,7 +11,7 @@ set :branch, ENV["BRANCH"] || 'main'
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/yoshiki/app/#{fetch(:application)}"
 
-set :bundle_path, './vendor/bundle'
+set :bundle_path, -> { shared_path.join('bundle') }
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
