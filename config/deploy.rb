@@ -12,6 +12,7 @@ set :branch, ENV["BRANCH"] || 'main'
 set :deploy_to, "/home/yoshiki/app/#{fetch(:application)}"
 
 set :bundle_path, -> { shared_path.join('bundle') }
+set :bundle_without, %w{test}.join(' ')
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -27,7 +28,7 @@ set :pty, true
 # append :linked_files, "config/database.yml"
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "node_modules"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
